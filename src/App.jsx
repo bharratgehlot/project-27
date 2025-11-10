@@ -39,8 +39,14 @@ export default function BirthdayPage() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.6, duration: 0.4 }}
           className="bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg px-6 py-2"
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/Bday_letter.pdf';
+            link.download = "bday_letter.pdf";
+            link.click();
+          }}
         >
-          🎁 Send Love
+          🎁 Download B'day Letter
         </motion.button>
       </motion.div>
 
